@@ -232,7 +232,7 @@ if(mix$fere){
               ggplot2::geom_density(alpha=.3, ggplot2::aes(y=..scaled..)) +
               ggplot2::theme_bw() +
               ggplot2::xlim(0,1) +
-              ggplot2::xlab("Proportion of Diet") +
+              ggplot2::xlab("Proportion of Mixture") +
               ggplot2::ylab("Scaled Posterior Density") +
               ggplot2::labs(title = my.title) +
               ggplot2::theme(legend.position=c(1,1), legend.justification=c(1,1), legend.title=ggplot2::element_blank())
