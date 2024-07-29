@@ -204,7 +204,7 @@ run_model <- function(run, mix, source, discr, model_filename, alpha.prior = 1, 
   if(err=="resid" && mix$n.iso>1) jags.data <- c(jags.data,"I")
   if(err!="resid") jags.data <- c(jags.data,"frac_sig2")
   if(err=="mult") jags.params <- c(jags.params,"resid.prop")
-
+  jags.params <- c(jags.params, X_iso)
   # Set initial values for p.global different for each chain
   jags.inits <- function(){list(p.global=as.vector(MCMCpack::rdirichlet(1,alpha)))}
 
